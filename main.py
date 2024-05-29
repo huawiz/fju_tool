@@ -62,10 +62,10 @@ class MainWindow(QMainWindow):
 
     def update_time(self, schedule_data):
         # 获取当前时间
-        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
+        current_time = datetime.datetime.now()
         # 更新时间标签
-        self.ui.timeLabel.setText("現在時間: " + current_time)
+        self.ui.timeLabel.setText("現在時間: " + current_time.strftime("%Y-%m-%d %H:%M:%S")
+)
 
         # 获取下一节课的信息
         nextCourse = coursedata.getNextCourse(schedule_data, current_time)

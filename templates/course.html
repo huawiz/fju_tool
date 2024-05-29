@@ -12,7 +12,7 @@
       text-align: center;
       padding: 8px;
       border: 1px solid #000;
-      width: 90px;
+
       background-color: #f0f0f0;
       font-size: large;
 
@@ -22,7 +22,6 @@
       text-align: center;
       padding: 8px;
       border: 1px solid #000;
-      width: 90px;
       font-size: x-large;
 
     }
@@ -31,11 +30,11 @@
 </head>
 <body>
   <h1 style='text-align: center;'>{{ courseName }}</h1>
-  <table>
+  <table style='text-align: center;'>
     <tr>
       <th>節次</th>
       {% for day, courses in scheduleData %}
-        <th>{{ day }}</th>
+        <th width=150>{{ day }}</th>
       {% endfor %}
     </tr>
     {% for period, value in periodMapping.items() %}
