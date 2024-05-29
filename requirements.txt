@@ -1,0 +1,8 @@
+jinja2
+pytz
+lxml
+bs4
+requests
+folium
+PyQt5
+PyQtWebEngine

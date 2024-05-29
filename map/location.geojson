@@ -1,0 +1,707 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43463134765626,
+          25.032878539486095
+        ]
+      },
+      "properties": {
+        "name": "焯炤館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43458843231203,
+          25.033301403308528
+        ]
+      },
+      "properties": {
+        "name": "YP-野聲樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43410563468935,
+          25.033947847484242
+        ]
+      },
+      "properties": {
+        "name": "CF-舒德樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43428802490236,
+          25.0344144516899
+        ]
+      },
+      "properties": {
+        "name": "輔園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43397688865663,
+          25.03486161238833
+        ]
+      },
+      "properties": {
+        "name": "宜真女宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4348191022873,
+          25.03464775312723
+        ]
+      },
+      "properties": {
+        "name": "EP-食營系工廠"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43480837345125,
+          25.035444863023763
+        ]
+      },
+      "properties": {
+        "name": "FC-輔幼中心"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43435239791872,
+          25.035736487301566
+        ]
+      },
+      "properties": {
+        "name": "宜美女宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43404126167299,
+          25.03542542138059
+        ]
+      },
+      "properties": {
+        "name": "NF/HE-輔仁大學民生學院（秉雅樓）"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43349409103395,
+          25.035231004779426
+        ]
+      },
+      "properties": {
+        "name": "TC-織品服裝學系（朝橒樓）"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43514096736908,
+          25.036489846810426
+        ]
+      },
+      "properties": {
+        "name": "AA/AL/AM-藝術學院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43450260162355,
+          25.036237107361888
+        ]
+      },
+      "properties": {
+        "name": "LL-文學院圖書館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43444895744325,
+          25.036538450490834
+        ]
+      },
+      "properties": {
+        "name": "LG-文學院研究所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43360674381258,
+          25.03641694125373
+        ]
+      },
+      "properties": {
+        "name": "LI-文華樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43389642238618,
+          25.03684951358941
+        ]
+      },
+      "properties": {
+        "name": "LF-文友樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43408417701723,
+          25.03683007216885
+        ]
+      },
+      "properties": {
+        "name": "冠五樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43392860889436,
+          25.0372091793138
+        ]
+      },
+      "properties": {
+        "name": "LE-文開樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43250703811646,
+          25.037797279104627
+        ]
+      },
+      "properties": {
+        "name": "LP-積健樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43124103546144,
+          25.038570067104782
+        ]
+      },
+      "properties": {
+        "name": "MD-國璽樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43020033836366,
+          25.037714653684432
+        ]
+      },
+      "properties": {
+        "name": "ES-進修部大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43136441707613,
+          25.037272363724032
+        ]
+      },
+      "properties": {
+        "name": "LM-利瑪竇大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43168091773988,
+          25.03685923429853
+        ]
+      },
+      "properties": {
+        "name": "BS-伯達樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43168628215791,
+          25.0363731978989
+        ]
+      },
+      "properties": {
+        "name": "LW-樹德樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43087625503541,
+          25.036402360137174
+        ]
+      },
+      "properties": {
+        "name": "SL-羅耀拉大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4301520586014,
+          25.0359163219273
+        ]
+      },
+      "properties": {
+        "name": "JS-濟時樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43220126628877,
+          25.03483244978378
+        ]
+      },
+      "properties": {
+        "name": "LA/LB/LC/FG/FL/AV-外語學院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4316111803055,
+          25.035469165073376
+        ]
+      },
+      "properties": {
+        "name": "SF-聖言樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43257141113283,
+          25.03441931214105
+        ]
+      },
+      "properties": {
+        "name": "LH-理工綜合教室"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43327951431276,
+          25.033699963278174
+        ]
+      },
+      "properties": {
+        "name": "耕莘樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.42910063266756,
+          25.034910216713882
+        ]
+      },
+      "properties": {
+        "name": "神學院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43230855464937,
+          25.03586285760664
+        ]
+      },
+      "properties": {
+        "name": "淨心堂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43188476562501,
+          25.038093758095425
+        ]
+      },
+      "properties": {
+        "name": "中美堂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4300984144211,
+          25.036980743097505
+        ]
+      },
+      "properties": {
+        "name": "仁愛學苑"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.42966926097871,
+          25.03691755853705
+        ]
+      },
+      "properties": {
+        "name": "信義和平男宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.42954051494598,
+          25.036543310857812
+        ]
+      },
+      "properties": {
+        "name": "SS-法園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.42961561679842,
+          25.036378058272415
+        ]
+      },
+      "properties": {
+        "name": "仁園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43088698387147,
+          25.038817941469755
+        ]
+      },
+      "properties": {
+        "name": "創新育成中心"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4344757795334,
+          25.036883536067947
+        ]
+      },
+      "properties": {
+        "name": "文鐸樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43329024314882,
+          25.03715571555663
+        ]
+      },
+      "properties": {
+        "name": "文園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43268406391144,
+          25.037136274184594
+        ]
+      },
+      "properties": {
+        "name": "文宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43302738666536,
+          25.037563983657247
+        ]
+      },
+      "properties": {
+        "name": "文德宿舍"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43096745014192,
+          25.035396258910033
+        ]
+      },
+      "properties": {
+        "name": "格物男宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4306402206421,
+          25.03501714616225
+        ]
+      },
+      "properties": {
+        "name": "立言男宿"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43279135227205,
+          25.039056094799513
+        ]
+      },
+      "properties": {
+        "name": "體育場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43245339393617,
+          25.039964961420466
+        ]
+      },
+      "properties": {
+        "name": "籃球場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43208861351015,
+          25.04016909096529
+        ]
+      },
+      "properties": {
+        "name": "排球場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43131077289583,
+          25.03993093979663
+        ]
+      },
+      "properties": {
+        "name": "輔大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4312517642975,
+          25.03808403748416
+        ]
+      },
+      "properties": {
+        "name": "DG-倬章樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4291435480118,
+          25.035950344664688
+        ]
+      },
+      "properties": {
+        "name": "法園籃球場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4315575361252,
+          25.034667194893654
+        ]
+      },
+      "properties": {
+        "name": "LG-理工實驗大樓/理工學院綜合教室"
+      }
+    },
+	{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43288791179658,
+          25.03375828901878
+        ]
+      },
+      "properties": {
+        "name": "MA-數學系"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43256068229677,
+          25.033962428892544
+        ]
+      },
+      "properties": {
+        "name": "PH-物理系"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43206715583803,
+          25.03406935916704
+        ]
+      },
+      "properties": {
+        "name": "LS-生命科學系"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.43176138401033,
+          25.03439987033534
+        ]
+      },
+      "properties": {
+        "name": "CH-化學系"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ courseName }}</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th {
+      text-align: center;
+      padding: 8px;
+      border: 1px solid #000;
+      width: 90px;
+      background-color: #f0f0f0;
+      font-size: large;
+
+    }
+
+    td {
+      text-align: center;
+      padding: 8px;
+      border: 1px solid #000;
+      width: 90px;
+      font-size: x-large;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1 style='text-align: center;'>{{ courseName }}</h1>
+  <table>
+    <tr>
+      <th>節次</th>
+      {% for day, courses in scheduleData %}
+        <th>{{ day }}</th>
+      {% endfor %}
+    </tr>
+    {% for period, value in periodMapping.items() %}
+      <tr>
+        <th>{{ period }}</th>
+        {% for day, courses in scheduleData %}
+          {% set courseForPeriod = [] %}
+          {% for coursePeriod, courseName in courses %}
+            {% if '-' in coursePeriod %}
+              {% set start, end = coursePeriod.split('-') %}
+              {% if value|int >= start|int and value|int <= end|int %}
+                {% set _ = courseForPeriod.append(courseName) %}
+              {% endif %}
+            {% elif value|int == coursePeriod|int %}
+              {% set _ = courseForPeriod.append(courseName) %}
+            {% endif %}
+          {% endfor %}
+          {% if courseForPeriod %}
+            <td>
+              {{ courseForPeriod | join("<br>") }}
+            </td>
+          {% else %}
+            <td></td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

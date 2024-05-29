@@ -1,0 +1,10 @@
+# path
+venv/
+__pycache__/
+.vscode/
+data/
+
+# file
+.env
+web.config
+.deployment
