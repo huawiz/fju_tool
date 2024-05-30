@@ -5,11 +5,11 @@ import json
 import os
 
 class CourseData:
-    def __init__(self, username, password):
+    def __init__(self, username:str, password:str):
         self.username = username
         self.password = password
 
-    def get_request(self):
+    def getRequest(self):
         # 建立連線
         session_requests = requests.session()
         result = session_requests.get('http://estu.fju.edu.tw/CheckSelList/HisListNew.aspx')
@@ -53,8 +53,8 @@ class CourseData:
         session_requests.close()
         return result.text
         
-    def CourseData(self, request_text):
-
+    def getCourseData(self):
+        request_text = self.getRequest()
         # 取得beautifulsoup物件，並使用html解析器
         soup = bs(request_text, 'html.parser')
 
@@ -79,25 +79,32 @@ class CourseData:
         course = [dict(zip(head_list, row)) for row in row_list] if row_list else None
         return course
 
-    def saveData(self, data):
+    def saveData(self, data:json):
         module_dir = os.path.dirname(os.path.abspath(__file__))
         project_dir = os.path.dirname(module_dir)
         data_dir = os.path.join(project_dir, 'data')
-        file_path = os.path.join(data_dir, 'courseData.json')
+        file_path = os.path.join(data_dir, 'getCourseData.json')
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
 
-        file_path = os.path.join(data_dir, 'courseData.json')
+        file_path = os.path.join(data_dir, 'getCourseData.json')
 
         # 将数据写入文件
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
-def updateCourse(username,password):
+def updateCourse(username:str,password:str):
     stu = CourseData(username,password)
-    request = stu.get_request()
-    stu.saveData(stu.CourseData(request))
+    request = stu.getRequest()
+    stu.saveData(stu.getCourseData(request))
 
+
+if __name__ == '__main__':
+    stu = CourseData('510171292','qA9yZhC9')
+    request = stu.getRequest()
+    htmldata = stu.getCourseData(request)
+    print(request)
+    
 
 
 
