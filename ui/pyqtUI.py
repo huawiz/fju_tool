@@ -35,9 +35,9 @@ class Ui_ClassHelper(object):
         self.updateButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.updateButton.setObjectName("updateButton")
         self.horizontalLayout.addWidget(self.updateButton)
-        self.loadButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.loadButton.setObjectName("loadButton")
-        self.horizontalLayout.addWidget(self.loadButton)
+        #self.loadButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        #self.loadButton.setObjectName("loadButton")
+        #self.horizontalLayout.addWidget(self.loadButton)
         self.mapButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.mapButton.setObjectName("mapButton")
         self.horizontalLayout.addWidget(self.mapButton)
@@ -57,7 +57,7 @@ class Ui_ClassHelper(object):
         self.currentClassLabel.setObjectName("currentClassLabel")
         self.verticalLayout.addWidget(self.currentClassLabel)
         ClassHelper.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(ClassHelper)
+        #self.statusbar = QtWidgets.QStatusBar(ClassHelper)
         #self.statusbar.setObjectName("statusbar")
         #ClassHelper.setStatusBar(self.statusbar)
 
@@ -66,9 +66,9 @@ class Ui_ClassHelper(object):
 
     def retranslateUi(self, ClassHelper):
         _translate = QtCore.QCoreApplication.translate
-        ClassHelper.setWindowTitle(_translate("ClassHelper", "課表小助手"))
+        ClassHelper.setWindowTitle(_translate("ClassHelper", "輔大上課小助手"))
         self.updateButton.setText(_translate("ClassHelper", "更新課表"))
-        self.loadButton.setText(_translate("ClassHelper", "載入課表"))
+        #self.loadButton.setText(_translate("ClassHelper", "載入課表"))
         self.mapButton.setText(_translate("ClassHelper", "開啟學校地圖"))
         self.timeLabel.setText(_translate("ClassHelper", "現在時間:"))
         self.currentClassLabel.setText(_translate("ClassHelper", "下一節課:"))

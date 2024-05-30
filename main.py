@@ -20,11 +20,12 @@ class MainWindow(QMainWindow):
 
         # 連接點擊事件
         self.ui.updateButton.clicked.connect(self.show_login)
-        self.ui.loadButton.clicked.connect(self.load_schedule)
+        #self.ui.loadButton.clicked.connect(self.load_schedule)
         self.ui.mapButton.clicked.connect(self.open_map)
 
 
         schedule_data = self.get_scheduleData()
+        self.load_schedule()
         # 初始化時間
         self.init_time_widget()
 
@@ -73,7 +74,7 @@ class MainWindow(QMainWindow):
         # 更新当前课程标签
         if nextCourse:
             self.ui.currentClassLabel.setText(
-                f"下一節課: 星期{nextCourse['星期']} | {nextCourse['科目名稱'].split('\n')[0]} | 教室:{nextCourse['教室']}")
+                f"下一節課: 星期{nextCourse['星期']} | {nextCourse['科目名稱'].split('\n')[0]} | {nextCourse['教室']} | {nextCourse['節次']}")
         else:
             self.ui.currentClassLabel.setText("目前沒有課程")
 
@@ -113,7 +114,7 @@ class MainWindow(QMainWindow):
     def open_map(self):
         html_content = map.renderMap()
         self.map_window = QWebEngineView()
-        self.map_window.setWindowTitle("School Map")
+        self.map_window.setWindowTitle("學校地圖")
         self.map_window.setGeometry(200, 200, 1024, 1024)
         self.map_window.setHtml(html_content)
         self.map_window.show()
