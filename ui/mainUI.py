@@ -11,14 +11,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_ClassHelper(object):
+class UIClassHelper(object):
 
     def setupUi(self, ClassHelper):
 
         ClassHelper.setObjectName("ClassHelper")
         ClassHelper.setGeometry(100, 100, 1024, 916)
         ClassHelper.setFixedSize(ClassHelper.size())
-        #ClassHelper.resize(1072, 748)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -35,9 +34,6 @@ class Ui_ClassHelper(object):
         self.updateButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.updateButton.setObjectName("updateButton")
         self.horizontalLayout.addWidget(self.updateButton)
-        #self.loadButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        #self.loadButton.setObjectName("loadButton")
-        #self.horizontalLayout.addWidget(self.loadButton)
         self.mapButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.mapButton.setObjectName("mapButton")
         self.horizontalLayout.addWidget(self.mapButton)
@@ -57,10 +53,6 @@ class Ui_ClassHelper(object):
         self.currentClassLabel.setObjectName("currentClassLabel")
         self.verticalLayout.addWidget(self.currentClassLabel)
         ClassHelper.setCentralWidget(self.centralwidget)
-        #self.statusbar = QtWidgets.QStatusBar(ClassHelper)
-        #self.statusbar.setObjectName("statusbar")
-        #ClassHelper.setStatusBar(self.statusbar)
-
         self.retranslateUi(ClassHelper)
         QtCore.QMetaObject.connectSlotsByName(ClassHelper)
 
@@ -74,11 +66,3 @@ class Ui_ClassHelper(object):
         self.currentClassLabel.setText(_translate("ClassHelper", "下一節課:"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    ClassHelper = QtWidgets.QMainWindow()
-    ui = Ui_ClassHelper()
-    ui.setupUi(ClassHelper)
-    ClassHelper.show()
-    sys.exit(app.exec_())

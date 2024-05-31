@@ -83,11 +83,11 @@ class CourseData:
         module_dir = os.path.dirname(os.path.abspath(__file__))
         project_dir = os.path.dirname(module_dir)
         data_dir = os.path.join(project_dir, 'data')
-        file_path = os.path.join(data_dir, 'getCourseData.json')
+        file_path = os.path.join(data_dir, 'courseData.json')
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
 
-        file_path = os.path.join(data_dir, 'getCourseData.json')
+        file_path = os.path.join(data_dir, 'courseData.json')
 
         # 将数据写入文件
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -96,14 +96,10 @@ class CourseData:
 def updateCourse(username:str,password:str):
     stu = CourseData(username,password)
     request = stu.getRequest()
-    stu.saveData(stu.getCourseData(request))
+    stu.saveData(stu.getCourseData())
 
 
-if __name__ == '__main__':
-    stu = CourseData('510171292','qA9yZhC9')
-    request = stu.getRequest()
-    htmldata = stu.getCourseData(request)
-    print(request)
+
     
 
 

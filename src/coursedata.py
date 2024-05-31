@@ -172,13 +172,7 @@ def mergeSameRowHtml(htmlContent):
     # 將修改後的 HTML 內容轉換為字串
     modifiedHtml = soup.prettify()
     return modifiedHtml
-'''
-# 渲染課表HTML
-def renderCourse():
-    render = render_template('course.html',courseName = '課表',periodMapping=periodMapping,scheduleData=getScheduleData(getjsonCourseData()))
-    render = mergeSameRowHtml(render)
-    return render
-'''
+
             
 
             
