@@ -15,24 +15,14 @@ dictMappingPeriodTime = {period: time for period, time in zip(periods, times)}
 
 # 讀課表資料
 def getjsonCourseData():
-   # 获取当前文件所在的目录（即模块文件的目录）
     module_dir = os.path.dirname(os.path.abspath(__file__))
-        
-        # 获取项目的根目录
     project_dir = os.path.dirname(module_dir)
-
-        # 拼接文件路径
     filePath = os.path.join(project_dir, 'data','courseData.json')
-    
-    # 確保目錄存在
     os.makedirs(os.path.dirname(filePath), exist_ok=True)
-    
-    # 嘗試打開並讀取檔案
     try:
         with open(filePath, 'r', encoding='utf-8') as f:
             jsonCourseData = json.load(f)
     except FileNotFoundError:
-        # 如果檔案不存在，建立一個新的空檔案
         jsonCourseData = {}
         with open(filePath, 'w', encoding='utf-8') as f:
             json.dump(jsonCourseData, f, ensure_ascii=False, indent=4)

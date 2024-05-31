@@ -162,13 +162,13 @@ def renderMap():
     var currentIndex = -1; // 當前選擇的建議索引
 
     document.getElementById('searchBox').addEventListener('input', function () {
-        var query = this.value.trim();
+        var query = this.value.trim().toLowerCase();
         var suggestions = document.getElementById('suggestions');
         suggestions.innerHTML = '';
         currentIndex = -1; // 重製索引
         if (query) {
             var filteredPlaces = places.filter(function (place) {
-                return place.includes(query);
+                return place.toLowerCase().includes(query);
             });
             filteredPlaces.forEach(function (place) {
                 var li = document.createElement('li');
@@ -232,7 +232,7 @@ def renderMap():
             var query = document.getElementById('searchBox').value.trim();
             if (query) {
                 var place = places.find(function (p) {
-                    return p === query;
+                    return p.toLowerCase() === query.toLowerCase();
                 });
                 if (place) {
                     document.getElementById('searchBox').value = place;
