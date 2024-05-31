@@ -1,12 +1,8 @@
 import sys
-import json
-import datetime
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from jinja2 import Environment, FileSystemLoader
-import pytz
-import os
 import ui
 import fju
 
