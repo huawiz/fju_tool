@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt5.QtCore import Qt
-from src import scraper
+from fju import scraper
 
 class LoginDialog(QDialog):
     def __init__(self, parent=None):
@@ -38,6 +38,9 @@ class LoginDialog(QDialog):
                 login.saveData(data)
                 self.accept()
             else:
-                raise ValueError("無效的用戶名或密碼，或無法獲取課程數據。")
+                self.usernameInput.clear()
+                self.passwordInput.clear()
+                raise ValueError("登入失敗，請確認輸入的帳號密碼是否正確")
+            
         except Exception as e:
             QMessageBox.warning(self, "登入失敗", str(e))

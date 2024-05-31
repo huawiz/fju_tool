@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class UIClassHelper(object):
+class mainUI(object):
 
     def setupUi(self, ClassHelper):
 
