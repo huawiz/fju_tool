@@ -60,7 +60,6 @@ class mainUI(object):
         _translate = QtCore.QCoreApplication.translate
         ClassHelper.setWindowTitle(_translate("ClassHelper", "輔大上課小幫手"))
         self.updateButton.setText(_translate("ClassHelper", "更新課表"))
-        #self.loadButton.setText(_translate("ClassHelper", "載入課表"))
         self.mapButton.setText(_translate("ClassHelper", "開啟學校地圖"))
         self.timeLabel.setText(_translate("ClassHelper", "現在時間:"))
         self.currentClassLabel.setText(_translate("ClassHelper", "下一節課:"))

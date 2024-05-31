@@ -19,7 +19,6 @@ class LoginDialog(QDialog):
         self.passwordInput.setEchoMode(QLineEdit.Password)
         self.loginButton = QPushButton("登入", self)
         self.loginButton.clicked.connect(self.getCourseData)
-
         layout.addWidget(self.usernameLabel)
         layout.addWidget(self.usernameInput)
         layout.addWidget(self.passwordLabel)
