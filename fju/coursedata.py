@@ -65,8 +65,7 @@ def getCurrentTime():
 
 # 取得同天中，距離現在最近的下一堂課
 def getNextPeriodCourse(todayCourses):
-    timeCurrent = getCurrentTime()
-    timeCurrentStr = timeCurrent.strftime('%H:%M')
+    timeCurrentStr = getCurrentTime().strftime('%H:%M')
     nextCourse = None
     minTimeDiff = float('inf')  # 初始設置一個極大值來存放最小時間差
     for course in todayCourses:
@@ -82,7 +81,6 @@ def getNextPeriodCourse(todayCourses):
 # 取得下一堂課
 def getNextCourse(jsonCourseData):
     # 取得今天的課程
-    timeCurrent = getCurrentTime()
     todayCourses = getTodayCourse(jsonCourseData)
     
     # 如果今天有課程
