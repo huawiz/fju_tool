@@ -89,14 +89,10 @@ class CourseData:
 
         file_path = os.path.join(data_dir, 'courseData.json')
 
-        # 将数据写入文件
+        # 寫入文件
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
-def updateCourse(username:str,password:str):
-    stu = CourseData(username,password)
-    request = stu.getRequest()
-    stu.saveData(stu.getCourseData())
 
 
 

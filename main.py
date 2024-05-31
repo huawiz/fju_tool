@@ -25,26 +25,14 @@ class MainWindow(QMainWindow):
         self.ui.mapButton.clicked.connect(self.openMap)
         self.scheduleData = self.getScheduleData()
         self.loadSchedule()
-        
         # 初始化時間
         self.initTimeWidget()
 
     def getScheduleData(self):
-        filePath = os.path.join(os.getcwd(), "data/courseData.json")
-        # 檢查檔案，沒有則新建空的json
-        if not os.path.exists(filePath):
-            os.makedirs(os.path.dirname(filePath), exist_ok=True)
-            with open(filePath, "w", encoding="utf8") as f:
-                json.dump([], f)
-
-        # 載入json
-        try:
-            with open(filePath, "r", encoding="utf8") as f:
-                scheduleData = json.load(f)
-        except (json.JSONDecodeError, FileNotFoundError):
-            scheduleData = []
-
-        return scheduleData
+        self.scheduleData = fju.getjsonCourseData()
+        if self.scheduleData is None or self.scheduleData == {}:
+            self.showLogin()
+        return self.scheduleData
 
     # 建立定時器
     def initTimeWidget(self):
@@ -56,19 +44,13 @@ class MainWindow(QMainWindow):
     # 更新介面文字標籤
     def updateLabel(self):
         # 獲取台灣時間
-        tzTW = pytz.timezone('Asia/Taipei')
-        currentTime = datetime.datetime.now(tzTW)
+        currentTime = fju.getCurrentTime()
         # 更新時間標籤
         self.ui.timeLabel.setText("現在時間: " + currentTime.strftime("%Y-%m-%d %H:%M:%S"))
 
-        # 獲得下節課訊息，若運行作業中，資料被損毀則重新登入獲得
-        try:
-            nextCourse = fju.getNextCourse(self.scheduleData, currentTime)
-        except:
-            self.showLogin()
-            nextCourse = fju.getNextCourse(self.scheduleData, currentTime)
-
-
+        # 獲得下節課訊息
+        nextCourse = fju.getNextCourse(self.scheduleData)
+        
         # 更新下節課標籤
         if nextCourse is not None:
             self.ui.currentClassLabel.setText(f"下一節課: 星期{nextCourse['星期']} | {nextCourse['科目名稱'].split('\n')[0]} | {nextCourse['教室']} | {nextCourse['節次']}")
@@ -87,18 +69,13 @@ class MainWindow(QMainWindow):
 
     # 載入課表
     def loadSchedule(self):
+        # 渲染課表到畫面的WebView
         try:
-            if not self.scheduleData:
-                self.showLogin()
-                return
-
             env = Environment(loader=FileSystemLoader('templates'))
             template = env.get_template('course.html')
-
             htmlContent = template.render(courseName='課表', periodMapping=fju.periodMapping,
-                                           scheduleData=fju.getScheduleData(self.scheduleData))
+                                           scheduleData=fju.getScheduleData())
             htmlContent = fju.mergeSameRowHtml(htmlContent)
-
             self.ui.scheduleText.setHtml(htmlContent)
         except Exception as e:
             print(e)

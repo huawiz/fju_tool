@@ -26,7 +26,10 @@ def getjsonCourseData():
         jsonCourseData = {}
         with open(filePath, 'w', encoding='utf-8') as f:
             json.dump(jsonCourseData, f, ensure_ascii=False, indent=4)
-    
+    except json.decoder.JSONDecodeError:
+        jsonCourseData = {}
+        with open(filePath, 'w', encoding='utf-8') as f:
+            json.dump(jsonCourseData, f, ensure_ascii=False, indent=4)
     return jsonCourseData
 
 #獲得今天的Weekday index
@@ -56,9 +59,13 @@ def getNextCourseDay():
     return None
 
 
+def getCurrentTime():
+    tz = pytz.timezone('Asia/Taipei')
+    return datetime.datetime.now(tz)
 
 # 取得同天中，距離現在最近的下一堂課
-def getNextPeriodCourse(todayCourses, timeCurrent):
+def getNextPeriodCourse(todayCourses):
+    timeCurrent = getCurrentTime()
     timeCurrentStr = timeCurrent.strftime('%H:%M')
     nextCourse = None
     minTimeDiff = float('inf')  # 初始設置一個極大值來存放最小時間差
@@ -73,14 +80,15 @@ def getNextPeriodCourse(todayCourses, timeCurrent):
     return nextCourse
 
 # 取得下一堂課
-def getNextCourse(jsonCourseData, timeCurrent):
+def getNextCourse(jsonCourseData):
     # 取得今天的課程
+    timeCurrent = getCurrentTime()
     todayCourses = getTodayCourse(jsonCourseData)
     
     # 如果今天有課程
     if len(todayCourses)!=0:
         # 找到下一個節次的課程
-        nextCourse = getNextPeriodCourse(todayCourses, timeCurrent)
+        nextCourse = getNextPeriodCourse(todayCourses)
         if nextCourse:
             return nextCourse
     
@@ -98,8 +106,8 @@ def getNextCourse(jsonCourseData, timeCurrent):
 # WebView使用
 
 
-def getScheduleData(data):
-    
+def getScheduleData():
+    data = getjsonCourseData()
     scheduleData = []
 
     # 對所有可能的星期進行處理
